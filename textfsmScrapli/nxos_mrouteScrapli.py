@@ -57,7 +57,9 @@ class CiscoCommands:
         # TextFSM parse response
         textfsm_template = basedir +'/nxos_mroute.textfsm'
         textfsm_parsed_response = textfsm_parse(textfsm_template, output.result,)
-        print(textfsm_parsed_response)
+
+        for line in textfsm_parsed_response:
+            print(line)
 
 
 if __name__ == '__main__':
